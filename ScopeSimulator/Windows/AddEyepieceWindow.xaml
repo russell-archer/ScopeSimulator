@@ -1,0 +1,27 @@
+﻿<Window x:Class="ScopeSimulator.Windows.AddEyepieceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Eyepiece" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="270" d:DesignWidth="449" SizeToContent="WidthAndHeight" Loaded="Window_Loaded">
+
+    <Grid Width="421">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="118*" />
+            <ColumnDefinition Width="298*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Eyepiece Name" Height="28" HorizontalAlignment="Right" Margin="0,10,28,0" Name="label1" VerticalAlignment="Top" Width="96" Grid.Column="1" />
+        <Label Content="Field of View (degrees)" Height="28" HorizontalAlignment="Right" Margin="0,74,0,0" Name="label2" VerticalAlignment="Top" Width="124" Grid.Column="1" />
+        <Label Content="Focal Length (in mm)" Height="28" HorizontalAlignment="Right" Margin="0,42,0,0" Name="label3" VerticalAlignment="Top" Width="124" Grid.Column="1" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBoxEyepieceName" VerticalAlignment="Top" Width="282" MaxLength="50" LostFocus="textBoxEyepieceName_LostFocus" Grid.ColumnSpan="2" GotFocus="textBoxEyepieceName_GotFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,44,0,0" MaxLength="10" Name="textBoxFocalLength" VerticalAlignment="Top" Width="282" Grid.ColumnSpan="2" LostFocus="textBoxFocalLength_LostFocus" GotFocus="textBoxFocalLength_GotFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,76,0,0" MaxLength="10" Name="textBoxFoV" VerticalAlignment="Top" Width="282" Grid.ColumnSpan="2" GotFocus="textBoxFoV_GotFocus" LostFocus="textBoxFoV_LostFocus" />
+
+        <Button Content="OK" Height="23" Margin="19,106,208,92" Name="buttonOK" Click="buttonOK_Click" Grid.Column="1" />
+        <Button Content="Cancel" Height="23" Margin="99,106,127,94" Name="buttonCancel" Width="75" Click="buttonCancel_Click" Grid.Column="1" />
+        <Expander Header="Help" Height="69" HorizontalAlignment="Left" Margin="12,145,0,0" Name="expanderHelp" VerticalAlignment="Top" Width="397" IsExpanded="True" Background="#005F9FB9" BorderBrush="#FFA5ACB2" Grid.ColumnSpan="2">
+            <Grid Height="48">
+                <TextBox Height="37" HorizontalAlignment="Left" Margin="5,8,0,0" Name="textBoxHelp" VerticalAlignment="Top" Width="384" AcceptsReturn="True" IsReadOnly="True" Text="Define an eyepiece." TextWrapping="Wrap" BorderThickness="0" Background="#005F9FB9" />
+            </Grid>
+        </Expander>
+    </Grid>
+</Window>

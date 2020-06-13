@@ -1,0 +1,25 @@
+﻿<Window x:Class="ScopeSimulator.Windows.AddCCDWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add CCD" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="292" Width="425" Loaded="Window_Loaded">
+    <Grid Width="402" Height="252" HorizontalAlignment="Left">
+        <Label Content="CCD Name" Height="28" HorizontalAlignment="Right" Margin="0,10,58,0" Name="label1" VerticalAlignment="Top" Width="96" />
+        <Label Content="Pizel Size (w x h in microns)" Height="28" HorizontalAlignment="Right" Margin="0,72,0,0" Name="label2" VerticalAlignment="Top" Width="154" />
+        <Label Content="Number of Pixels (w x h)" Height="28" HorizontalAlignment="Right" Margin="0,40,12,0" Name="label3" VerticalAlignment="Top" Width="142" />
+        <Label Content="x" Height="28" HorizontalAlignment="Right" Name="label4" VerticalAlignment="Top" Width="16" Margin="0,39,265,0" />
+        <Label Content="x" Height="28" HorizontalAlignment="Right" Name="label5" VerticalAlignment="Bottom" Width="16" Margin="0,0,265,152" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBoxCCDName" VerticalAlignment="Top" Width="234" MaxLength="50" LostFocus="textBoxCCDName_LostFocus" GotFocus="textBoxCCDName_GotFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="11,42,0,0" MaxLength="10" Name="textBoxNPixelsWidth" VerticalAlignment="Top" Width="108" GotFocus="textBoxNPixelsWidth_GotFocus" LostFocus="textBoxNPixelsWidth_LostFocus" />
+        <TextBox Height="23" Margin="140,42,156,0" MaxLength="10" Name="textBoxNPixelsHeight" VerticalAlignment="Top" LostFocus="textBoxNPixelsHeight_LostFocus" GotFocus="textBoxNPixelsHeight_GotFocus" />
+        <TextBox Height="23" Margin="12,74,0,0" MaxLength="10" Name="textBoxPixelSizeWidth" VerticalAlignment="Top" LostFocus="textBoxPixelSizeWidth_LostFocus" GotFocus="textBoxPixelSizeWidth_GotFocus" HorizontalAlignment="Left" Width="107" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="140,74,0,0" MaxLength="10" Name="textBoxPixelSizeHeight" VerticalAlignment="Top" Width="106" LostFocus="textBoxPixelSizeHeight_LostFocus" GotFocus="textBoxPixelSizeHeight_GotFocus" />
+
+        <Button Content="OK" Name="buttonOK" Click="buttonOK_Click" Margin="92,120,235,109" />
+        <Button Content="Cancel" Height="23" Name="buttonCancel" Width="75" Click="buttonCancel_Click" Margin="173,119,155,109" />
+
+        <Expander Header="Help" Height="91" HorizontalAlignment="Left" Margin="11,149,0,0" Name="expanderHelp" VerticalAlignment="Top" Width="379" IsExpanded="True" Background="#005F9FB9" BorderBrush="#FFA5ACB2">
+                <TextBox HorizontalAlignment="Left" Margin="2,0,0,-3" Name="textBoxHelp" Width="353" AcceptsReturn="True" IsReadOnly="True" Text="Define a CCD." TextWrapping="Wrap" BorderThickness="0" Background="#005F9FB9" Grid.ColumnSpan="2" Height="66" />
+        </Expander>
+    </Grid>
+</Window>
